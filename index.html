@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLC Grooming - Loving Pet Grooming in Visalia</title>
+    <style>
+        :root {
+            --primary-teal: #1f7a8c;
+            --secondary-orange: #f08a24;
+            --background-light: #f4fbfc;
+            --text-dark: #333;
+        }
+
+        /* Global Styles and Typography */
+        body {
+            font-family: 'Trebuchet MS', Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-teal);
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--secondary-orange);
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        /* Layout Containers */
+        section {
+            padding: 40px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: var(--primary-teal);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 5%;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            padding: 5px 0;
+            transition: border-bottom 0.3s;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid var(--secondary-orange);
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--primary-teal);
+            text-align: center;
+            padding: 80px 5%;
+            color: white;
+        }
+
+        #hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: white;
+            line-height: 1.1;
+        }
+
+        #hero p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            color: #e6ecf2; /* Slightly softer white */
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--secondary-orange);
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background-color: #cc7c1e; /* Slightly darker orange on hover */
+            transform: translateY(-2px);
+        }
+
+        /* Services Section (Grid) */
+        #services h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--primary-teal);
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .service-card {
+            background-color: white;
+            border: 2px solid #eee;
+            padding: 30px;
+            border-top: 5px solid var(--secondary-orange); /* Orange top border */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            color: var(--primary-teal);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #eef7fa; /* Slightly lighter background for contrast */
+            text-align: center;
+            padding: 60px 5%;
+        }
+
+        #about h2 {
+            color: var(--primary-teal);
+            margin-bottom: 30px;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+
+        /* Contact Section */
+        #contact h2 {
+            color: var(--primary-teal);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .info-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .contact-info {
+             flex: 1;
+             min-width: 250px;
+             text-align: center;
+        }
+
+        .phone-large a {
+            font-size: 2em;
+            color: var(--primary-teal);
+            display: block;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px dashed var(--primary-teal);
+        }
+
+        /* Hours Table */
+        .schedule-container {
+            width: 40%;
+            margin: 20px auto;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .hours-table th, .hours-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        .hours-table th {
+            background-color: var(--primary-teal);
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .hours-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-teal);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1em;
+        }
+
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .info-block {
+                flex-direction: column;
+            }
+
+            #hero h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 640px) {
+            /* Header adjustment for mobile */
+            header .container {
+                flex-direction: column;
+                padding: 10px 5%;
+            }
+            nav a {
+                display: block; /* Stack links on smaller screens */
+                margin: 5px 0;
+            }
+
+            /* Service Grid: automatically adjusts to 1 column via minmax(250px, 1fr) but good to ensure flex/grid behavior */
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            /* Contact layout adjustment */
+             .schedule-container {
+                 width: 95%;
+                 margin: 20px auto;
+                 max-width: none;
+             }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HEADER (Sticky Navigation) -->
+    <header>
+        <div class="container">
+            <div class="logo">TLC Grooming</div>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="hero">
+        <h1>TLC Grooming</h1>
+        <p>Loving Pet Grooming in Visalia</p>
+        <a href="tel:+15593727642" class="btn">Call (559) 372-7642</a>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section id="services">
+        <h2>Grooming Services</h2>
+        <div class="service-grid">
+            
+            <div class="service-card">
+                <h3>Full-Service Dog Grooming</h3>
+                <p>Bathing, brushing, trimming, and deep conditioning treatments tailored to your dog's needs.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Bath & Brush</h3>
+                <p>A refreshing wash and brush out designed to keep your pup looking shiny and feeling great.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Nail Trimming</h3>
+                <p>Professional trimming of nails to ensure comfort, prevent overgrowth, and maintain proper gait.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>De-shedding Treatment</h3>
+                <p>Specialized treatment to remove excess undercoat and reduce shedding stress for a healthier coat.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. ABOUT SECTION -->
+    <section id="about">
+        <h2>About TLC Grooming</h2>
+        <p>We are a beloved local grooming shop where pets are treated like family, not just clients. Our mission is built on trust and care.</p>
+        <p>With our dedicated staff, we specialize in sending every dog home happy, healthy, and looking their absolute best!</p>
+    </section>
+
+    <!-- 5. CONTACT SECTION -->
+    <section id="contact">
+        <h2>Visit Us</h2>
+        
+        <div class="info-block">
+            <div class="contact-info">
+                <h3>Call Us Today!</h3>
+                <div class="phone-large">
+                    <a href="tel:+15593727642">(559) 372-7642</a>
+                </div>
+            </div>
+
+             <div class="contact-info">
+                <h3>Our Location</h3>
+                <p><strong>TLC Grooming</strong></p>
+                <p>(559) 372-7642</p>
+                <p style="margin-top: 10px;">1915 E Main St, Visalia, CA 93292</p>
+            </div>
+        </div>
+
+        <div class="schedule-container">
+             <h3>Our Hours</h3>
+             <table class="hours-table">
+                 <thead>
+                     <tr>
+                         <th>Day</th>
+                         <th>Hours</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td>Monday - Friday</td>
+                         <td>7:30am - 5:30pm</td>
+                     </tr>
+                     <tr>
+                         <td>Saturday</td>
+                         <td style="background-color: #ffdddd;">Closed</td>
+                     </tr>
+                     <tr>
+                         <td>Sunday</td>
+                         <td style="background-color: #ffdddd;">Closed</td>
+                     </tr>
+                 </tbody>
+             </table>
+        </div>
+
+    </section>
+
+
+    <!-- 6. FOOTER -->
+    <footer>
+        TLC Grooming © 2026
+    </footer>
+
+</body>
+</html>
